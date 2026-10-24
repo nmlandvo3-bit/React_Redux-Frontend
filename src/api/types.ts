@@ -21,16 +21,16 @@ export interface Application {
 export interface Goal {
   id: string
   name: string
-  icon?: string
+  icon?: string | null
   targetAmount: number
   balance: number
   targetDate: Date
   created: Date
   accountId: string
-  transactionIds: string[]
-  tagIds: string[]
+  userId?: string | null
+  transactionIds: string[] | null
+  tagIds: string[] | null
 }
-
 
 export interface Tag {
   id: string
